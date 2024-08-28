@@ -1,3 +1,8 @@
 .products__title {
   color: $color-black;
 }
+
+.catalog__item--plus {
+  display: flex;
+  flex-direction: column;
+}

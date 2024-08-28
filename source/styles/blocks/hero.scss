@@ -1,12 +1,21 @@
 .hero__title {
-  //color: $color-white;
+  color: $color-white;
 }
 
 .hero__slogan {
   padding: 0;
   font-family: $second-font;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  //color: $color-white;
+  color: $color-white;
+}
+
+.hero__container {
+  background-image: url("/images/mobile-cat@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 320px;
+  height: 302px;
 }
