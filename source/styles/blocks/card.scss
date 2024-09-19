@@ -1,30 +1,187 @@
-.card__title {
-  font-family: $second-font;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: $special-grey-2;
+.card {
+  margin: 0 -20px;
+  padding: 0 20px 25px;
+  border-top: 1px solid $color-border-eb;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    padding: 0 37px 40px;
+    background-image: linear-gradient(to top, $program-background-color 430px, $color-white 430px);
+    border-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 16px;
+    padding-top: 20px;
+
+    @media (min-width: $tablet) {
+      flex-direction: column;
+      margin-bottom: 32px;
+      padding: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    min-height: 107px;
+    object-fit: contain;
+
+    @media (min-width: $tablet) {
+      align-self: center;
+      margin-top: 10px;
+      margin-bottom: 21px;
+      min-width: 200px;
+      min-height: 210px;
+    }
+
+    @media (min-width: $desktop) {
+      min-width: 169px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__inner {
+    flex-grow: 1;
+  }
+
+  &__link-title {
+    display: block;
+    max-width: 76px;
+
+    @media (min-width: $tablet) {
+      margin: 0 auto;
+      min-width: 136px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $special-grey-2;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 16px;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      padding-top: 2px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
-.card__title--yet {
-  color: $color-black-1;
+
+.card--all {
+  border-bottom: 1px solid $color-border-eb;
+
+  @media (min-width: $tablet) {
+    background-image: none;
+    border: 1px solid $color-border-eb;
+    margin-top: 82px;
+  }
 }
 
-.card__text {
-  font-size: 12px;
-  line-height: 16px;
-}
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
 
-.card__button--yet {
-  background-color: $program_background-color;
-  color: $special-grey-4;
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
 .card__button--plus {
   cursor: pointer;
   background-color: $color-white;
   background-image: url("../../icons/stack.svg#plus");
+  background-size: contain;
   border: none;
   width: 30px;
   height: 30px;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    min-width: 60px;
+    min-height: 60px;
+    margin-bottom: 50px;
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 39px;
+    padding: 0;
+  }
+}
+
+.card__title--yet {
+  color: $color-black-1;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 40px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 135px;
+    padding: 0 17px;
+    margin-bottom: 24px;
+  }
+}
+
+.card__text {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 170px;
+    padding: 0;
+    margin-bottom: 90px;
+  }
+}
+
+.card__button--yet {
+  background-color: $program_background-color;
+  color: $special-grey-4;
 }

@@ -1,8 +1,39 @@
+
 .product-table {
+  width: 100%;
   font-size: 12px;
   line-height: 16px;
-}
+  border-collapse: collapse;
+  border-spacing: unset;
+  border: none;
 
-.product-table__title {
-  font-weight: 400;
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @media (min-width: $tablet) {
+
+      border-bottom: 1px solid $color-border;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  &__cell {
+    margin: 0;
+    padding: 0;
+  }
 }

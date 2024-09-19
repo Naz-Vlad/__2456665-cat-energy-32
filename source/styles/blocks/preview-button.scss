@@ -1,0 +1,22 @@
+.preview-button {
+  width: 88%;
+  margin: 0 auto;
+  display: block;
+  padding: 11px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    display: block;
+    font-size: 20px;
+    line-height: 26px;
+    width: 245px;
+    margin-top: 35px;
+    margin-left: 120px;
+    padding: 14px;
+    z-index: 1;
+
+    @media (min-width: $desktop) {
+      margin-left: 190px;
+    }
+  }
+}

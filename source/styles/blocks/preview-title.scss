@@ -1,0 +1,21 @@
+.preview-title {
+  display: block;
+  padding-top: 27px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    width: 500px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    margin-left: 120px;
+    padding-top: 65px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 120px;
+    margin-left: 190px;
+  }
+}

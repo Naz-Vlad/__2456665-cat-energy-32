@@ -1,0 +1,78 @@
+.statistic {
+  padding-top: 5px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+
+    @media (min-width: $tablet) {
+      gap: 43px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      box-sizing: border-box;
+      width: 436px;
+      padding-left: 80px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-border;
+    border-radius: 2px;
+    min-height: 56px;
+    max-width: 124px;
+    position: relative;
+
+    @media (min-width: $tablet) {
+      min-height: 72px;
+      min-width: 162;
+    }
+  }
+
+  &__number {
+    display: block;
+    font-family: $second-font;
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-black;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+
+  &__description {
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: lowercase;
+    text-align: center;
+    background-color: $color-grey;
+    padding: 0 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 14px;
+      width: 125px;
+      background-color: $color-white;
+    }
+
+    @media (min-width: $desktop) {
+      background-color: $color-grey;
+    }
+  }
+}

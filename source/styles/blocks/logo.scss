@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__toggle {
+    background-color: $color-white;
+    border: none;
+    padding: 0;
+    margin-bottom: 3px;
+  }
+
+  &__link--text {
+    margin-right: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: flex-start;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__link--text {
+      margin-left: 14px;
+    }
+  }
+}

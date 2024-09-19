@@ -1,0 +1,230 @@
+.program {
+  padding: 0 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    padding: 0 30px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 110px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 20px;
+
+    @media (min-width: $tablet) {
+      row-gap: 30px;
+    }
+
+    @media (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    background-color: $program_background-color;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 12px;
+    min-width: 280px;
+    min-height: 266px;
+
+    @media (min-width: $tablet) {
+      max-width: 708px;
+      min-height: 372px;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: 570px;
+      min-height: 374px;
+    }
+  }
+
+  &__item::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $basic-green;
+    border-radius: 50%;
+    top: 24;
+    left: 20;
+
+    @media (min-width: $tablet) {
+      width: 200px;
+      height: 200px;
+      top: 92;
+      left: auto;
+      right: 62;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
+      top: 47;
+      left: 52;
+      right: auto;
+    }
+  }
+
+  &__item--thin::after {
+    position: absolute;
+    content: "";
+    top: 22;
+    left: 27;
+    width: 36px;
+    height: 50px;
+    background-image: url("../../icons/stack.svg#cat-sits");
+
+    @media (min-width: $tablet) {
+      width: 140px;
+      height: 194px;
+      top: 81;
+      right: 93;
+      left: auto;
+    }
+
+    @media (min-width: $desktop) {
+      width: 70px;
+      height: 97px;
+      top: 41;
+      left: 67;
+      right: auto;
+    }
+  }
+
+  &__item--thick::after {
+    position: absolute;
+    content: "";
+    top: 37;
+    left: 13;
+    width: 67px;
+    height: 28px;
+    background-image: url("../../icons/stack.svg#cat-goes");
+
+    @media (min-width: $tablet) {
+      width: 268px;
+      height: 112px;
+      top: 135;
+      right: 29;
+      left: auto;
+    }
+
+    @media (min-width: $desktop) {
+      width: 134px;
+      height: 56px;
+      top: 67;
+      left: 33;
+      right: auto;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 37px;
+    color: $color-black;
+    text-transform: uppercase;
+    padding-left: 70px;
+    padding-top: 10px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 24px;
+      padding-top: 57px;
+      padding-left: 33px;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 73px;
+      padding-left: 193px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    padding-top: 29px;
+
+    @media (min-width: $tablet) {
+      width: 340px;
+      margin-bottom: 52px;
+      padding-top: 0;
+      padding-left: 32px;
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-black;
+    }
+
+    @media (min-width: $desktop) {
+      width: 455px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__border {
+    background-color: $color-hr;
+    border: 0;
+    width: 240px;
+    height: 1px;
+    margin: 23px auto 19px;
+    display: block;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.program__link {
+  position: relative;
+  font-family: $second-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-black;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    padding-left: 33px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 55px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 101px;
+    width: 32px;
+    height: 10px;
+    background-image: url("../../icons/stack.svg#icon-arrow");
+    transform-origin: left;
+
+    @media (min-width: $tablet) {
+      padding-top: 4px;
+      margin-left: 62px;
+    }
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scaleX(1.35);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
