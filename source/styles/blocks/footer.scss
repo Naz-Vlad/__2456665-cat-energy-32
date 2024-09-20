@@ -1,0 +1,28 @@
+.footer {
+  background-color: $program_background-color;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &__border {
+    border: 1px solid $color-hr;
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  @media (min-width: $tablet) {
+    & {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &__border {
+      display: none;
+    }
+  }
+}

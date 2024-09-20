@@ -1,10 +1,37 @@
+.site-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 33px;
+  margin-right: 5px;
+  margin-top: 2px;
 
-.site-list__link {
-  font-family: $second-font;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: center;
-  color: $color-black;
-  text-transform: uppercase;
+  &__link {
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $tablet) {
+  .site-list {
+    width: 500px;
+  }
+
+  .site-list__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .site-list__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-white;
+  }
 }
