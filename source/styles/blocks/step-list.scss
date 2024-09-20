@@ -1,0 +1,147 @@
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+
+    &__item--leaf::after {
+      content: "1";
+      color: $program-background-color;
+      z-index: -1;
+      font-family: $second-font;
+      font-size: 280px;
+      line-height: 280px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 34%;
+    }
+
+    &__item--boiling::after {
+      content: "2";
+      color: $program-background-color;
+      z-index: -1;
+      font-family: $second-font;
+      font-size: 280px;
+      line-height: 280px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 34%;
+    }
+
+    &__item--eat::after {
+      content: "3";
+      color: $program-background-color;
+      z-index: -1;
+      font-family: $second-font;
+      font-size: 280px;
+      line-height: 280px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 34%;
+    }
+
+    &__item--time::after {
+      content: "4";
+      color: $program-background-color;
+      z-index: -1;
+      font-family: $second-font;
+      font-size: 280px;
+      line-height: 280px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 34%;
+    }
+
+    @media (min-width: $desktop) {
+      ::after {
+        left: 46%;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 60px;
+
+    @media (min-width: $tablet) {
+      display: block;
+      position: relative;
+      min-height: 280px;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    color: $color-white;
+    background-color: $basic-green;
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 60px;
+    height: 60px;
+    display: flex;
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
+      margin-top: 40px;
+    }
+  }
+
+  &__item--leaf::before {
+    background-image: url("../../icons/stack.svg#icon-leaf");
+    background-size: 30px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item--boiling::before {
+    background-image: url("../../icons/stack.svg#icon-boiling");
+    background-size: 26px 29px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item--eat::before {
+    background-image: url("../../icons/stack.svg#icon-eat");
+    background-size: 25px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item--time::before {
+    background-image: url("../../icons/stack.svg#icon-time");
+    background-size: 26px 31px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__text {
+    margin: 0;
+    align-self: center;
+
+    @media (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 24px;
+      width: 225px;
+      padding-top: 31px;
+    }
+  }
+}

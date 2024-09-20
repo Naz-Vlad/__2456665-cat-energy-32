@@ -1,0 +1,46 @@
+.application {
+  padding: 0 20px;
+  margin-bottom: 49px;
+
+  &__line {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0 30px;
+
+    &__line {
+      background-color: #e6e6e6;
+      border: 0;
+      width: 100%;
+      height: 1px;
+      margin: 0;
+      margin-top: 48px;
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 110px;
+    margin-bottom: 69px;
+
+    &__line {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet) {
+      font-size: 60px;
+      line-height: 60px;
+      padding-top: 45px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 71px;
+    }
+  }
+}

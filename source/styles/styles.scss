@@ -9,30 +9,35 @@
 
 /* BLOCKS */
 @import "./blocks/basis-heading.scss";
-
-/* ШАПКА */
-
 @import "./blocks/button.scss";
-@import "./blocks/main-nav.scss";
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
 @import "./blocks/site-list.scss";
-@import "./blocks/hero.scss";
-@import "./blocks/list-program.scss";
-@import "./blocks/application-list.scss";
+@import "./blocks/preview.scss";
+@import "./blocks/preview-content.scss";
+@import "./blocks/preview-title.scss";
+@import "./blocks/preview-text.scss";
+@import "./blocks/preview-image.scss";
+@import "./blocks/preview-button.scss";
+@import "./blocks/program.scss";
+@import "./blocks/application.scss";
+@import "./blocks/step-list.scss";
 @import "./blocks/example.scss";
+@import "./blocks/statistic.scss";
 @import "./blocks/slider.scss";
-@import "./blocks/result-list.scss";
 @import "./blocks/contacts.scss";
 
 /* КАТАЛОГ */
-
 @import "./blocks/catalog.scss";
 @import "./blocks/card.scss";
 @import "./blocks/product-table.scss";
 @import "./blocks/more-product.scss";
-@import "./blocks/more-list.scss";
+@import "./blocks/more.scss";
 @import "./blocks/present.scss";
 @import "./blocks/subscription.scss";
 
 /* ФУТЕР */
 
-@import "./blocks/page-footer.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/social.scss";
+@import "./blocks/copyright.scss";
