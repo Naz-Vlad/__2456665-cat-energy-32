@@ -1,19 +1,35 @@
 .site-list {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 33px;
-  margin-right: 5px;
-  margin-top: 2px;
+  flex-direction: column;
+  align-items: center;
+
+
+  &__item {
+    position: relative;
+    width: 320px;
+  }
 
   &__link {
+    display: block;
     font-family: $second-font;
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+    padding-top: 22px;
+    padding-bottom: 24px;
     text-align: center;
     color: $color-black;
     text-transform: uppercase;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(230, 230, 230, 1);
   }
 }
 
